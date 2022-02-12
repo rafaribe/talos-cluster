@@ -40,8 +40,8 @@ spec:
     policy: sync
     sources:
       - ingress
-    txtPrefix: "k8s."
-    txtOwnerId: "default"
+    txtPrefix: "k8s.talos."
+    txtOwnerId: "talos"
     domainFilters:
       - "${SECRET_DOMAIN}"
     resources:
