@@ -1,0 +1,15 @@
+# Editors
+.vscode/
+# Trash
+.DS_Store
+Thumbs.db
+# k8s
+kubeconfig
+# vscode-sops
+.decrypted~*.yaml
+.variables.sh
+bootstrap/.fullbootstrap.sh
+bootstrap-hidden.sh
+cluster/apps/networking/unifi/configmap.json
+wireguardconfig
+ignore
