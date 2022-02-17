@@ -30,7 +30,6 @@ spec:
       dashboard:
         annotations:
           kubernetes.io/ingress.class: traefik
-          cert-manager.io/cluster-issuer: ${CLUSTER_CERT}
           traefik.ingress.kubernetes.io/router.entrypoints: websecure
           hajimari.io/enable: "true"
           hajimari.io/icon: content-save
@@ -50,15 +49,9 @@ spec:
       config:
         osdsPerDevice: "1"
       nodes:
-        - name: "${WORKER01_HOSTNAME}"
+        - name: talos
           devices:
-            - name: "${WORKER01_DRIVE}"
-        - name: "${WORKER02_HOSTNAME}"
-          devices:
-            - name: "${WORKER02_DRIVE}"
-        - name: "${WORKER03_HOSTNAME}"
-          devices:
-            - name: "${WORKER03_DRIVE}"
+            - name: /dev/sda
     cephBlockPools:
       - name: ceph-blockpool
         spec:
