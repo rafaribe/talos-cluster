@@ -31,6 +31,8 @@ spec:
           - hosts:
               - "rook.${SECRET_DOMAIN}"
     cephClusterSpec:
+      mon:
+        count: 1
       dashboard:
         enabled: true
         urlPrefix: /
