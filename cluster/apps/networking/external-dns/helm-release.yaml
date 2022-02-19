@@ -51,7 +51,7 @@ spec:
       limits:
         memory: 250Mi
     serviceMonitor:
-      enabled: true
+      enabled: false
       interval: 5m
       scapeTimeout: 10s
     
