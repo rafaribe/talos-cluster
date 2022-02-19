@@ -49,7 +49,10 @@ spec:
       storage:
         useAllNodes: true
         useAllDevices: true
-        #deviceFilter:
+        nodes:
+          - name: "talos"
+            devices:
+              - name: "/dev/sda"
       healthCheck:
         daemonHealth:
           mon:
