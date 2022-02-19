@@ -36,15 +36,20 @@ spec:
         tls:
           - hosts:
               - "rook.${SECRET_DOMAIN}"
+    toolbox:
+      enabled: true
+      image: rook/ceph:v1.8.5
     cephClusterSpec:
       mon:
         count: 1
         allowMultiplePerNode: true
       mgr:
-        count: 1
-        allowMultiplePerNode: true
+        modules:
+        - name: pg_autoscaler
+      enabled: true
       dashboard:
         enabled: true
+        ssl: false
       crashCollector:
         disable: true
       storage:
