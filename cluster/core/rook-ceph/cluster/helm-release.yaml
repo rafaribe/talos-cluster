@@ -60,7 +60,10 @@ spec:
             interval: 45s
             timeout: 600s
       disruptionManagement:
-        managePodBudgets: true
+        managePodBudgets: false
+        osdMaintenanceTimeout: 30
+        manageMachineDisruptionBudgets: false
+        machineDisruptionBudgetNamespace: openshift-machine-api
     cephObjectStores: []
     cephBlockPools: 
     - name: ceph-blockpool
