@@ -21,6 +21,7 @@ spec:
     monitoring:
       enabled: false
     configOverride: |
+      [global]
       osd_pool_default_size = 1
       mon_warn_on_pool_no_redundancy = false
       bdev_flock_retry = 20
