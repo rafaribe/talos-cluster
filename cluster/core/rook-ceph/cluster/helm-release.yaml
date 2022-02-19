@@ -46,7 +46,7 @@ spec:
       mgr:
         modules:
         - name: pg_autoscaler
-      enabled: true
+          enabled: true
       dashboard:
         enabled: true
         ssl: false
