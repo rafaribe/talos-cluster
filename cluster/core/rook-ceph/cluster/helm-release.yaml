@@ -38,7 +38,7 @@ spec:
               - "rook.${SECRET_DOMAIN}"
     toolbox:
       enabled: true
-      image: rook/ceph:v1.8.5
+      image: rook/ceph:v1.8.6
     cephClusterSpec:
       mon:
         count: 1
